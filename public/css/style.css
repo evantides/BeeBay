@@ -65,7 +65,7 @@ form {
 
 body {
     background: var(--greenLight);
-    max-width: 800;
+    max-width: 800px;
 }
 
 header {
@@ -190,6 +190,10 @@ button:disabled {
 }
 
 @media (max-width: 300px) {
+    #mainProducts {
+        display: flex;
+        flex-wrap: wrap;
+    }
     img {
         width: 100px;
     }
