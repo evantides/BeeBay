@@ -18,8 +18,8 @@ mongoose.connection.once('open', ()=> {
 
 //specific products declaration
 // MUST BE AFTER MONGOOSE CONNECTION AND BEFORE POST
-const Product = require('../models/products.js');
-const Seed = require('../models/seed.js');
+const Product = require('./models/products.js');
+const Seed = require('./models/seed.js');
 
 //MIDDLEWARE
 app.use(express.urlencoded({extended:true})); // body parser
