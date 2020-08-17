@@ -34,7 +34,7 @@ span {
     color: var(--beeYellow);
 }
 
-h2, h3, h4, h5 {
+h1, h2, h3, h4, h5 {
     font-family: 'Roboto Slab', serif;
     text-align: center;
 }
@@ -53,6 +53,10 @@ h3 {
 form {
     font-size: 20px;
 
+}
+
+#show {
+    color: var(--orchid);
 }
 
 .content > h4 {

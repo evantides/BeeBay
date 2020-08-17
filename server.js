@@ -37,6 +37,7 @@ app.get('/products/seed', (req,res) => {
 
 // I N D U C E S //
 
+//redirects to index...
 app.get('/', function(req, res){
     res.redirect('/products');
 });
@@ -76,8 +77,6 @@ app.post("/products", (req, res) => {
 
 //BUY BUTTON (patch) DOES NOT WORK
 app.patch('/products/:id', (req, res) => {
-    let checkID = req.params.id;
-    console.log(req.params.id)
     Product.findById(req.params.id, (err, foundProduct)=> {
         console.log(foundProduct.quantity)
         if (foundProduct.quantity > 0) {
@@ -89,7 +88,6 @@ app.patch('/products/:id', (req, res) => {
         Product.updateOne({'_id': req.params.id}, {$set: {"quantity": foundProduct.quantity, "forSale" : foundProduct.forSale}}, (err, result)=> {
             console.log(err);
         });
-        console.log(foundProduct)
     });
     res.redirect('/products');
 })
