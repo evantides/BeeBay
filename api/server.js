@@ -2,7 +2,9 @@
 const express = require('express');
 const methodOverride = require("method-override");
 const app = express();
-const PORT = process.env.PORT || 3000;
+
+//port
+const portProcess = process.env.PORT || 3000;
 
 //mongoose / mongoURI variables
 const mongoose = require('mongoose');
@@ -98,6 +100,6 @@ app.get('/products/:id', (req, res)=>{
 });
 
 //Listen!!!
-app.listen(PORT, () => {
+app.listen(portProcess, () => {
     console.log('listening');
 })
