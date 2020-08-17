@@ -2,8 +2,7 @@
 const express = require('express');
 const methodOverride = require("method-override");
 const app = express();
-
-const favicon = require('serve-favicon');
+const favicon = require('express-favicon');
 
 
 
@@ -32,6 +31,8 @@ app.use(express.static("public")); //sets root as public... for CSS and whatnot
 app.set('view engine', 'jsx'); //view
 app.engine('jsx', require('express-react-views').createEngine()); //engine
 app.use(methodOverride("_method"));
+app.use(favicon('/public/favicon-16x16.png'));
+console.log(favicon)
 
 // SEED ROUTE
 app.get('/products/seed', (req,res) => {

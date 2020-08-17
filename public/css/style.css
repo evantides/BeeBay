@@ -75,6 +75,10 @@ header {
 
 a {
     text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+    border: var(--orchid) 1px solid;
+    background: var(--beeYellow);
     color: var(--orchid);
 }
 
