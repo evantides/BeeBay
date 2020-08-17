@@ -37,6 +37,10 @@ app.get('/products/seed', (req,res) => {
 
 // I N D U C E S //
 
+app.get('/', function(req, res){
+    res.redirect('/products');
+});
+
 // Index
 app.get("/products",(req,res) => {
     Product.find({}, (error, allProducts) => {
