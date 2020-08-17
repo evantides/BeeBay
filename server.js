@@ -3,6 +3,10 @@ const express = require('express');
 const methodOverride = require("method-override");
 const app = express();
 
+const favicon = require('serve-favicon');
+
+
+
 //port
 const portProcess = process.env.PORT || 3000;
 
@@ -15,6 +19,7 @@ mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true});
 mongoose.connection.once('open', ()=> {
     console.log('connected to mongo');
 });
+
 
 //specific products declaration
 // MUST BE AFTER MONGOOSE CONNECTION AND BEFORE POST
