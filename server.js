@@ -11,8 +11,7 @@ const portProcess = process.env.PORT || 3000;
 
 //mongoose / mongoURI variables
 const mongoose = require('mongoose');
-const mongoURI = 'mongodb+srv://dbAdminUser:Adg1RDGB2GA0wNpG@cluster0.mv4s8.azure.mongodb.net/store-SEIR?retryWrites=true&w=majority'
-
+const mongoURI = `mongodb+srv://dbAdminUser:${process.env.MONGO_PASSWORD}@cluster0.mv4s8.azure.mongodb.net/store-SEIR?retryWrites=true&w=majority`
 //connect to Mongo
 mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true});
 mongoose.connection.once('open', ()=> {
